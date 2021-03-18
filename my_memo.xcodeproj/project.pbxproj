@@ -18,6 +18,7 @@
 		B971AF062600D444003310AA /* mainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971AF052600D444003310AA /* mainTableViewController.swift */; };
 		B971AF0A2600D592003310AA /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971AF082600D592003310AA /* Memo+CoreDataClass.swift */; };
 		B971AF0B2600D592003310AA /* Memo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971AF092600D592003310AA /* Memo+CoreDataProperties.swift */; };
+		B9F857B92603679500A70FEC /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F857B82603679500A70FEC /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B971AF052600D444003310AA /* mainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTableViewController.swift; sourceTree = "<group>"; };
 		B971AF082600D592003310AA /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B971AF092600D592003310AA /* Memo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B9F857B82603679500A70FEC /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				B971AEFB2600D2FF003310AA /* LaunchScreen.storyboard */,
 				B971AEFE2600D2FF003310AA /* Info.plist */,
 				B971AEF62600D2FE003310AA /* my_memo.xcdatamodeld */,
+				B9F857B82603679500A70FEC /* detailViewController.swift */,
 			);
 			path = my_memo;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				B971AF062600D444003310AA /* mainTableViewController.swift in Sources */,
 				B971AEF22600D2FE003310AA /* ViewController.swift in Sources */,
+				B9F857B92603679500A70FEC /* detailViewController.swift in Sources */,
 				B971AEEE2600D2FE003310AA /* AppDelegate.swift in Sources */,
 				B92D16FF2601CEAF002F384B /* NewViewController.swift in Sources */,
 				B971AF0A2600D592003310AA /* Memo+CoreDataClass.swift in Sources */,

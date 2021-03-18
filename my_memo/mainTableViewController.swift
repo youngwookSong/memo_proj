@@ -17,6 +17,7 @@ class mainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("start")
         title = "My Memo!"
         getAllItems()
 
@@ -49,10 +50,28 @@ class mainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let model = models[indexPath.row] //model안의 데이터를 불러옴
+        print(indexPath.row)
         cell.textLabel?.text = model.name //셀에 model의 index에 해당하는걸 표시
         cell.detailTextLabel?.text = "\(model.date!)"
         return cell
     }
+    
+    //해당 인덱스 값만 보냄
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MemoDetailSegue"
+        {
+            if let destination = segue.destination as? detailViewController
+            {
+                if let selectdeIndex = self.tableView.indexPathForSelectedRow?.row
+                {
+                    print("-------------\(selectdeIndex)")
+                    destination.index = selectdeIndex
+                }
+            }
+        }
+    }
+    
+    
     
     
     //core Data------------------------
