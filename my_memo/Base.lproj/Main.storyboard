@@ -53,6 +53,7 @@
                     <navigationItem key="navigationItem" title="메모" id="grM-XI-9Oh">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="IFV-ih-t0t">
                             <connections>
+                                <action selector="df:" destination="zZm-mh-d3i" id="1vx-xP-uQl"/>
                                 <segue destination="SQP-cr-18h" kind="presentation" id="DNJ-Hy-Nsw"/>
                             </connections>
                         </barButtonItem>
@@ -142,19 +143,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NDO-gu-qvP">
-                                <rect key="frame" x="16" y="140" width="343" height="297"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="M1Q-gN-Hel">
+                                <rect key="frame" x="16" y="140" width="343" height="638"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cH-uN-cI7">
+                                <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" image="trash" catalog="system" id="vSx-t5-5eC">
+                                        <connections>
+                                            <action selector="remove:" destination="AAC-5i-Fw4" id="2Mw-k1-7NX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZE1-rt-Hag"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="ContentsLabel" destination="NDO-gu-qvP" id="dPs-kf-XfP"/>
+                        <outlet property="ContentsLabel" destination="M1Q-gN-Hel" id="KwU-og-79s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ana-lg-lBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,6 +195,7 @@
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

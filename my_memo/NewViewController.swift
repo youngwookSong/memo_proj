@@ -19,6 +19,7 @@ class NewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //모달로 구현
     @IBAction func cancelmemo(_ sender: Any) {
         print("취소")
         //alert로 취소하면 저장내용 없어진다고 구현
