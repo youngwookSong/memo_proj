@@ -144,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" id="M1Q-gN-Hel">
-                                <rect key="frame" x="16" y="140" width="343" height="638"/>
+                                <rect key="frame" x="16" y="140" width="343" height="594"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -157,6 +157,12 @@
                                     <barButtonItem title="Item" image="trash" catalog="system" id="vSx-t5-5eC">
                                         <connections>
                                             <action selector="remove:" destination="AAC-5i-Fw4" id="2Mw-k1-7NX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3PW-zc-Riz"/>
+                                    <barButtonItem title="Item" image="pencil" catalog="system" id="9wh-Ww-XiZ">
+                                        <connections>
+                                            <segue destination="hC6-wa-EQb" kind="presentation" identifier="editsegue" id="3sz-qM-gCX"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -172,6 +178,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ana-lg-lBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="436" y="938.42364532019712"/>
+        </scene>
+        <!--Edit memo-->
+        <scene sceneID="n6P-iC-gyU">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="qY4-nl-n8X" customClass="editViewController" customModule="my_memo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b8d-dl-6oh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6gk-yD-Uwz">
+                                <rect key="frame" x="16" y="115" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQL-3z-jYN">
+                                <rect key="frame" x="57" y="108" width="302" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mi2-NQ-uoc">
+                                <rect key="frame" x="16" y="150" width="343" height="628"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NXG-lc-ctj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit memo" id="QSP-Uq-tNs">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="xmark" catalog="system" id="wbF-HK-P8I">
+                            <connections>
+                                <action selector="cancel:" destination="qY4-nl-n8X" id="21K-9p-Nq0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" id="3xl-vM-G6w">
+                            <connections>
+                                <action selector="save:" destination="qY4-nl-n8X" id="dRx-Fg-6yq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ContentsEdit" destination="mi2-NQ-uoc" id="jPc-Wj-Yi0"/>
+                        <outlet property="TitleEdit" destination="rQL-3z-jYN" id="aPM-HN-6Wp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJE-FI-Hbp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2612" y="937.6847290640394"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RfI-LT-iai">
@@ -191,12 +251,34 @@
             </objects>
             <point key="canvasLocation" x="1669.5999999999999" y="128.57142857142858"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U2K-pu-hog">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="hC6-wa-EQb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3O8-Jd-kQn">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qY4-nl-n8X" kind="relationship" relationship="rootViewController" id="OEO-xz-usb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xe8-9s-Nvi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="938"/>
+        </scene>
     </scenes>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

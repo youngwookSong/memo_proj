@@ -14,7 +14,10 @@ class detailViewController: UIViewController {
         
     @IBOutlet weak var ContentsLabel: UILabel!
     
-    @IBAction func remove(_ sender: Any) {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //이거 나중에 데이터 옮기는거 해보자..
+    
+    @IBAction func remove(_ sender: Any)
+    {
         if let idx = index
         {
             //deleteItem(item: models[idx])
@@ -29,13 +32,20 @@ class detailViewController: UIViewController {
         }
     }
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //이거 나중에 데이터 옮기는거 해보자..
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        //getallitem
+        GetAllNShow()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        GetAllNShow()
+    }
+    
+    func GetAllNShow() {
         do{
             models = try context.fetch(Memo.fetchRequest())
         }
@@ -47,6 +57,20 @@ class detailViewController: UIViewController {
         {
             self.title = models[idx].name
             ContentsLabel.text = models[idx].contents
+        }
+    }
+    
+    //navigation에다 값을 줄때는 이케 줘야됨
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editsegue"
+        {
+            if let destinationVC = segue.destination as? UINavigationController
+            {
+                if let ChildVC = destinationVC.viewControllers.first as? editViewController
+                {
+                        ChildVC.indexx = index
+                }
+            }
         }
     }
     
