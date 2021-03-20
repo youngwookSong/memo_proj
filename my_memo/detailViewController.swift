@@ -35,13 +35,11 @@ class detailViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         GetAllNShow()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
         GetAllNShow()
     }
     

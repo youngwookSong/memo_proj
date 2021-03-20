@@ -56,10 +56,6 @@ class mainTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     //해당 인덱스 값만 보냄
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemoDetailSegue"
@@ -75,8 +71,7 @@ class mainTableViewController: UITableViewController {
         }
     }
     
-    
-    
+    //나중에 옆에 액세서리 넣어서 i 표시하고 적당한 기능 추가
     
     //core Data------------------------
     func getAllItems() //화면에 뿌려주는거
@@ -95,55 +90,6 @@ class mainTableViewController: UITableViewController {
         }
         
     }
-    
-    func createItem(name: String, content: String)
-    {
-        let newitem = Memo(context: context)
-        newitem.name = name
-        newitem.date = Date()
-        newitem.contents = content
-        
-        //save at coredata
-        do{
-            try context.save()
-        }
-        catch{
-            
-        }
-        getAllItems()
-    }
-    
-    func deleteItem(item: Memo)
-    {
-        //delete
-        context.delete(item)
-        
-        //삭제한 후에도 저장을 해야됨5
-        do{
-            try context.save()
-        }
-        catch{
-            
-        }
-        getAllItems()
-    }
-    
-    func updateItem(item: Memo, newName: String, newContent: String)
-    {
-        item.name = newName //제목 업데이트
-        item.date = Date() //시간 업데이트
-        item.contents = newContent //내용 업데이트
-        do{
-            try context.save()
-        }
-        catch{
-            
-        }
-        getAllItems()
-    }
-    
-    
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

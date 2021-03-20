@@ -16,7 +16,6 @@ class NewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     //모달로 구현
@@ -33,14 +32,22 @@ class NewViewController: UIViewController {
             self.createItem(name: title, content: Contentstext.text)
             self.dismiss(animated: true, completion: nil) //모달 창 닫기!
         }
-        
-        
     }
     
     //core-Data---------------------
     
+    func dateToStringChatTime() -> String {
+        let curDate = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko")
+        formatter.dateFormat = "yyyy년 MM월 dd일 HH:mm"
+        return formatter.string(from: curDate)
+    }
+
     func createItem(name: String, content: String)
     {
+        let time = self.dateToStringChatTime()
+        print(time)
         let newitem = Memo(context: context)
         newitem.name = name
         newitem.date = Date()
