@@ -8,36 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		B92D16FF2601CEAF002F384B /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D16FE2601CEAF002F384B /* NewViewController.swift */; };
-		B962B2CC260508BA00CE7F8B /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B962B2CA260508BA00CE7F8B /* Memo+CoreDataClass.swift */; };
-		B962B2CD260508BA00CE7F8B /* Memo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B962B2CB260508BA00CE7F8B /* Memo+CoreDataProperties.swift */; };
 		B971AEEE2600D2FE003310AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971AEED2600D2FE003310AA /* AppDelegate.swift */; };
 		B971AEF02600D2FE003310AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971AEEF2600D2FE003310AA /* SceneDelegate.swift */; };
 		B971AEF22600D2FE003310AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971AEF12600D2FE003310AA /* ViewController.swift */; };
 		B971AEF52600D2FE003310AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B971AEF32600D2FE003310AA /* Main.storyboard */; };
-		B971AEF82600D2FE003310AA /* my_memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B971AEF62600D2FE003310AA /* my_memo.xcdatamodeld */; };
 		B971AEFA2600D2FF003310AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B971AEF92600D2FF003310AA /* Assets.xcassets */; };
 		B971AEFD2600D2FF003310AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B971AEFB2600D2FF003310AA /* LaunchScreen.storyboard */; };
 		B971AF062600D444003310AA /* mainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B971AF052600D444003310AA /* mainTableViewController.swift */; };
 		B99D2D4E26048B9500C16010 /* editViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D2D4D26048B9500C16010 /* editViewController.swift */; };
 		B9F857B92603679500A70FEC /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F857B82603679500A70FEC /* detailViewController.swift */; };
+		B9FA7CB42606341D00B8520C /* memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9FA7CB22606341D00B8520C /* memo.xcdatamodeld */; };
+		B9FA7CB82606345800B8520C /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FA7CB62606345800B8520C /* Memo+CoreDataClass.swift */; };
+		B9FA7CB92606345800B8520C /* Memo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FA7CB72606345800B8520C /* Memo+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B92D16FE2601CEAF002F384B /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
-		B962B2CA260508BA00CE7F8B /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Memo+CoreDataClass.swift"; path = "../../Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B962B2CB260508BA00CE7F8B /* Memo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Memo+CoreDataProperties.swift"; path = "../../Memo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B971AEEA2600D2FE003310AA /* my_memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = my_memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B971AEED2600D2FE003310AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B971AEEF2600D2FE003310AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B971AEF12600D2FE003310AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B971AEF42600D2FE003310AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B971AEF72600D2FE003310AA /* my_memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = my_memo.xcdatamodel; sourceTree = "<group>"; };
 		B971AEF92600D2FF003310AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B971AEFC2600D2FF003310AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B971AEFE2600D2FF003310AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B971AF052600D444003310AA /* mainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTableViewController.swift; sourceTree = "<group>"; };
 		B99D2D4D26048B9500C16010 /* editViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewController.swift; sourceTree = "<group>"; };
 		B9F857B82603679500A70FEC /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		B9FA7CB32606341D00B8520C /* memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = memo.xcdatamodel; sourceTree = "<group>"; };
+		B9FA7CB62606345800B8520C /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B9FA7CB72606345800B8520C /* Memo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,8 @@
 				B971AEF92600D2FF003310AA /* Assets.xcassets */,
 				B971AEFB2600D2FF003310AA /* LaunchScreen.storyboard */,
 				B971AEFE2600D2FF003310AA /* Info.plist */,
-				B971AEF62600D2FE003310AA /* my_memo.xcdatamodeld */,
 				B9F857B82603679500A70FEC /* detailViewController.swift */,
+				B9FA7CB22606341D00B8520C /* memo.xcdatamodeld */,
 				B99D2D4D26048B9500C16010 /* editViewController.swift */,
 			);
 			path = my_memo;
@@ -90,8 +90,8 @@
 		B971AF0D2600D59E003310AA /* memo_data */ = {
 			isa = PBXGroup;
 			children = (
-				B962B2CA260508BA00CE7F8B /* Memo+CoreDataClass.swift */,
-				B962B2CB260508BA00CE7F8B /* Memo+CoreDataProperties.swift */,
+				B9FA7CB62606345800B8520C /* Memo+CoreDataClass.swift */,
+				B9FA7CB72606345800B8520C /* Memo+CoreDataProperties.swift */,
 			);
 			path = memo_data;
 			sourceTree = "<group>";
@@ -169,13 +169,13 @@
 				B971AF062600D444003310AA /* mainTableViewController.swift in Sources */,
 				B971AEF22600D2FE003310AA /* ViewController.swift in Sources */,
 				B9F857B92603679500A70FEC /* detailViewController.swift in Sources */,
+				B9FA7CB92606345800B8520C /* Memo+CoreDataProperties.swift in Sources */,
+				B9FA7CB82606345800B8520C /* Memo+CoreDataClass.swift in Sources */,
 				B971AEEE2600D2FE003310AA /* AppDelegate.swift in Sources */,
 				B92D16FF2601CEAF002F384B /* NewViewController.swift in Sources */,
-				B962B2CC260508BA00CE7F8B /* Memo+CoreDataClass.swift in Sources */,
 				B971AEF02600D2FE003310AA /* SceneDelegate.swift in Sources */,
-				B962B2CD260508BA00CE7F8B /* Memo+CoreDataProperties.swift in Sources */,
 				B99D2D4E26048B9500C16010 /* editViewController.swift in Sources */,
-				B971AEF82600D2FE003310AA /* my_memo.xcdatamodeld in Sources */,
+				B9FA7CB42606341D00B8520C /* memo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,13 +379,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B971AEF62600D2FE003310AA /* my_memo.xcdatamodeld */ = {
+		B9FA7CB22606341D00B8520C /* memo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B971AEF72600D2FE003310AA /* my_memo.xcdatamodel */,
+				B9FA7CB32606341D00B8520C /* memo.xcdatamodel */,
 			);
-			currentVersion = B971AEF72600D2FE003310AA /* my_memo.xcdatamodel */;
-			path = my_memo.xcdatamodeld;
+			currentVersion = B9FA7CB32606341D00B8520C /* memo.xcdatamodel */;
+			path = memo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

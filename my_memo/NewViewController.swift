@@ -46,11 +46,11 @@ class NewViewController: UIViewController {
 
     func createItem(name: String, content: String)
     {
-        let time = self.dateToStringChatTime()
+        let time = dateToStringChatTime()
         print(time)
         let newitem = Memo(context: context)
         newitem.name = name
-        newitem.date = Date()
+        newitem.date = time
         newitem.contents = content
         
         //save at coredata

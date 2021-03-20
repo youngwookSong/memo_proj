@@ -60,14 +60,14 @@ class editViewController: UIViewController {
         formatter.dateFormat = "yyyy년 MM월 dd일 HH:mm"
         return formatter.string(from: curDate)
     }
-    //이거 해결하기 데이터 코어랑 문제 있는듯
+    //한국시간으로 표기 Date()가 아니라 스트링으로!
     
     func updateItem(item: Memo, newName: String, newContent: String)
     {
         let time = self.dateToStringChatTime()
         print(time)
         item.name = newName //제목 업데이트
-        item.date = Date() //시간 업데이트
+        item.date = time //시간 업데이트
         item.contents = newContent //내용 업데이트
         do{
             try context.save()
