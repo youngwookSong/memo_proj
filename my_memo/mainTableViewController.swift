@@ -4,7 +4,7 @@
 //
 //  Created by 송영욱 on 2021/03/16.
 //
-
+//지금까지 한거 편집보기에서 취소 알러트 구현, 메인 목록에서 삭제 행위 구현,
 import UIKit
 
 class mainTableViewController: UITableViewController {
@@ -20,12 +20,7 @@ class mainTableViewController: UITableViewController {
         print("start")
         title = "My Memo!"
         getAllItems()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //navigationItem.leftBarButtonItem = editButtonItem
     }
     
     //이거 그냥 모달로 하면 이 주기가 안생김. 그래서 present를 full screen으로 해야됨!!!
@@ -56,6 +51,36 @@ class mainTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func EditButtin(_ sender: UIBarButtonItem) {
+        if tableviewmain.isEditing
+        {
+            sender.title = "Edit"
+            tableviewmain.setEditing(false, animated: true)
+            print("edit")
+            //tableviewmain.indexPath(for: <#UITableViewCell#>)
+        }
+        else
+        {
+            sender.title = "Done"
+            tableviewmain.setEditing(true, animated: true)
+            print("Done")
+        }
+    }
+    //슬라이드 해서 삭제 (테이블 뷰에서)
+    //위의 Editbuttin이랑 연결되어있음!!!!!!!!!
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete
+        {
+            deleteItem(item: models[indexPath.row])
+            getAllItems()
+        }
+    }
+    
+    //셀을 움직이기!
+    /*override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+    }*/
+    
     //해당 인덱스 값만 보냄
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemoDetailSegue"
@@ -76,19 +101,30 @@ class mainTableViewController: UITableViewController {
     //core Data------------------------
     func getAllItems() //화면에 뿌려주는거
     {
-        do
-        {
+        do{
             models = try context.fetch(Memo.fetchRequest())
             
             DispatchQueue.main.async { // data는 백그라운드이기때문에 main에서 놓으라는 명령이 필요
                 self.tableviewmain.reloadData()
             }
         }
-        catch
-        {
+        catch{
             //error
         }
+    }
+    
+    func deleteItem(item: Memo)
+    {
+        //delete
+        context.delete(item)
         
+        //삭제한 후에도 저장을 해야됨5
+        do{
+            try context.save()
+        }
+        catch{
+            
+        }
     }
     /*
     // Override to support conditional editing of the table view.

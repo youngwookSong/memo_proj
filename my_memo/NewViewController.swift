@@ -21,8 +21,10 @@ class NewViewController: UIViewController {
     //모달로 구현
     @IBAction func cancelmemo(_ sender: Any) {
         print("취소")
-        //alert로 취소하면 저장내용 없어진다고 구현
-        self.dismiss(animated: true, completion: nil)
+        let sheet = UIAlertController(title: "경고", message: "지금 취소 시 내용이 저장되지 않습니다! 그래도 창을 닫을까요?", preferredStyle: .alert)
+        sheet.addAction(UIAlertAction(title: "Yes!", style: .destructive, handler: { _ in self.dismiss(animated: true, completion: nil)  }))
+        sheet.addAction(UIAlertAction(title: "No!", style: .cancel, handler: nil))
+        present(sheet, animated: true)
     }
     
     @IBAction func savememo(_ sender: Any) {

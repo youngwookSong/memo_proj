@@ -51,6 +51,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="메모" id="grM-XI-9Oh">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="IaC-W4-QaD">
+                            <connections>
+                                <action selector="EditButtin:" destination="zZm-mh-d3i" id="2Wo-8L-5fz"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="IFV-ih-t0t">
                             <connections>
                                 <action selector="df:" destination="zZm-mh-d3i" id="1vx-xP-uQl"/>
