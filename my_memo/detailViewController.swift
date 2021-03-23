@@ -12,7 +12,8 @@ class detailViewController: UIViewController {
     private var models = [Memo]()
     var index : Int? //prepare로 앞에서 인덱스 정보만 가져옴
         
-    @IBOutlet weak var ContentsLabel: UILabel!
+    
+    @IBOutlet weak var contentsview: UITextView!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //이거 나중에 데이터 옮기는거 해보자..
     
@@ -54,7 +55,7 @@ class detailViewController: UIViewController {
         if let idx = index
         {
             self.title = models[idx].name
-            ContentsLabel.text = models[idx].contents
+            contentsview.text = models[idx].contents
         }
     }
     
