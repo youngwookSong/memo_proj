@@ -19,6 +19,7 @@
 		B98804F4260CDF8300EAE9B0 /* FeelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98804F3260CDF8300EAE9B0 /* FeelCollectionViewController.swift */; };
 		B98804F8260CE2D200EAE9B0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98804F7260CE2D200EAE9B0 /* CollectionViewCell.swift */; };
 		B99D2D4E26048B9500C16010 /* editViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D2D4D26048B9500C16010 /* editViewController.swift */; };
+		B9DE9066260DDFDC00450493 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DE9065260DDFDC00450493 /* resultViewController.swift */; };
 		B9F857B92603679500A70FEC /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F857B82603679500A70FEC /* detailViewController.swift */; };
 		B9FA7CB42606341D00B8520C /* memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9FA7CB22606341D00B8520C /* memo.xcdatamodeld */; };
 		B9FA7CB82606345800B8520C /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FA7CB62606345800B8520C /* Memo+CoreDataClass.swift */; };
@@ -40,6 +41,7 @@
 		B98804F3260CDF8300EAE9B0 /* FeelCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelCollectionViewController.swift; sourceTree = "<group>"; };
 		B98804F7260CE2D200EAE9B0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B99D2D4D26048B9500C16010 /* editViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewController.swift; sourceTree = "<group>"; };
+		B9DE9065260DDFDC00450493 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		B9F857B82603679500A70FEC /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		B9FA7CB32606341D00B8520C /* memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = memo.xcdatamodel; sourceTree = "<group>"; };
 		B9FA7CB62606345800B8520C /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -76,22 +78,17 @@
 		B971AEEC2600D2FE003310AA /* my_memo */ = {
 			isa = PBXGroup;
 			children = (
+				B9DE9069260E00F300450493 /* memo */,
+				B9DE9063260DDA2C00450493 /* diary */,
 				B971AF0D2600D59E003310AA /* memo_data */,
 				B971AEED2600D2FE003310AA /* AppDelegate.swift */,
 				B971AEEF2600D2FE003310AA /* SceneDelegate.swift */,
 				B971AEF12600D2FE003310AA /* ViewController.swift */,
-				B971AF052600D444003310AA /* mainTableViewController.swift */,
-				B98804F3260CDF8300EAE9B0 /* FeelCollectionViewController.swift */,
-				B92D16FE2601CEAF002F384B /* NewViewController.swift */,
 				B971AEF32600D2FE003310AA /* Main.storyboard */,
-				B98804F7260CE2D200EAE9B0 /* CollectionViewCell.swift */,
 				B971AEF92600D2FF003310AA /* Assets.xcassets */,
 				B971AEFB2600D2FF003310AA /* LaunchScreen.storyboard */,
 				B971AEFE2600D2FF003310AA /* Info.plist */,
-				B9F857B82603679500A70FEC /* detailViewController.swift */,
 				B9FA7CB22606341D00B8520C /* memo.xcdatamodeld */,
-				B99D2D4D26048B9500C16010 /* editViewController.swift */,
-				B9064D75260CB2D100FDB1F9 /* diarymainViewController.swift */,
 			);
 			path = my_memo;
 			sourceTree = "<group>";
@@ -103,6 +100,28 @@
 				B9FA7CB72606345800B8520C /* Memo+CoreDataProperties.swift */,
 			);
 			path = memo_data;
+			sourceTree = "<group>";
+		};
+		B9DE9063260DDA2C00450493 /* diary */ = {
+			isa = PBXGroup;
+			children = (
+				B9DE9065260DDFDC00450493 /* resultViewController.swift */,
+				B98804F7260CE2D200EAE9B0 /* CollectionViewCell.swift */,
+				B98804F3260CDF8300EAE9B0 /* FeelCollectionViewController.swift */,
+				B9064D75260CB2D100FDB1F9 /* diarymainViewController.swift */,
+			);
+			path = diary;
+			sourceTree = "<group>";
+		};
+		B9DE9069260E00F300450493 /* memo */ = {
+			isa = PBXGroup;
+			children = (
+				B971AF052600D444003310AA /* mainTableViewController.swift */,
+				B92D16FE2601CEAF002F384B /* NewViewController.swift */,
+				B9F857B82603679500A70FEC /* detailViewController.swift */,
+				B99D2D4D26048B9500C16010 /* editViewController.swift */,
+			);
+			path = memo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +207,7 @@
 				B99D2D4E26048B9500C16010 /* editViewController.swift in Sources */,
 				B9064D76260CB2D100FDB1F9 /* diarymainViewController.swift in Sources */,
 				B9FA7CB42606341D00B8520C /* memo.xcdatamodeld in Sources */,
+				B9DE9066260DDFDC00450493 /* resultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

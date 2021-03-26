@@ -356,6 +356,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kvf-b2-yyN" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="exc-24-yCF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pqT-nh-Tz3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -392,7 +393,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciQ-yg-na4">
-                                            <rect key="frame" x="43" y="54" width="42" height="21"/>
+                                            <rect key="frame" x="42" y="54" width="45" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -400,8 +401,10 @@
                                         </label>
                                     </subviews>
                                 </collectionViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.89019607840000003" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="collectionLabel" destination="ciQ-yg-na4" id="nyT-tO-8ZI"/>
+                                    <segue destination="y6j-qG-Eyk" kind="show" identifier="resultsegue" id="wMm-iL-la6"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -410,11 +413,45 @@
                             <outlet property="delegate" destination="jSe-Vu-0KO" id="ycZ-oo-7sh"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="cXD-gE-COS"/>
+                    <navigationItem key="navigationItem" id="cXD-gE-COS">
+                        <barButtonItem key="rightBarButtonItem" title="취소" id="E2a-Gn-F9u">
+                            <connections>
+                                <action selector="cancelAction:" destination="jSe-Vu-0KO" id="4pi-Wc-qom"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0E-rz-k1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233" y="2017"/>
+            <point key="canvasLocation" x="2232.8000000000002" y="2016.5024630541873"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="OxE-hr-1gr">
+            <objects>
+                <viewController id="y6j-qG-Eyk" customClass="resultViewController" customModule="my_memo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CYh-DI-MQ6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eI-Tu-kOD">
+                                <rect key="frame" x="166" y="369" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lW0-Om-Ypf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0OY-VK-OId"/>
+                    <connections>
+                        <outlet property="indexLabel" destination="9eI-Tu-kOD" id="baL-JV-LxP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1m-53-P99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3138" y="2017"/>
         </scene>
     </scenes>
     <resources>
