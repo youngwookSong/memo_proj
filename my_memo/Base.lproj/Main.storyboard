@@ -142,11 +142,11 @@
             </objects>
             <point key="canvasLocation" x="-530" y="129"/>
         </scene>
-        <!--My Diary-->
+        <!--My Diary!-->
         <scene sceneID="gar-tq-yig">
             <objects>
                 <navigationController hidesBottomBarWhenPushed="YES" id="llu-Xa-XHv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Diary" image="book.fill" catalog="system" id="26A-Lb-ubw"/>
+                    <tabBarItem key="tabBarItem" title="My Diary!" image="book.fill" catalog="system" id="26A-Lb-ubw"/>
                     <navigationItem key="navigationItem" id="Tfc-kR-FfJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tWF-31-jXj">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -440,18 +440,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh9-de-jxV">
+                                <rect key="frame" x="16" y="89" width="343" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lW0-Om-Ypf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0OY-VK-OId"/>
+                    <navigationItem key="navigationItem" id="0OY-VK-OId">
+                        <barButtonItem key="rightBarButtonItem" title="완료" id="bPL-pI-7ZZ">
+                            <connections>
+                                <action selector="okItem:" destination="y6j-qG-Eyk" id="weg-vW-7zU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="feelLabel" destination="yh9-de-jxV" id="Xj7-g9-tzl"/>
                         <outlet property="indexLabel" destination="9eI-Tu-kOD" id="baL-JV-LxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1m-53-P99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3138" y="2017"/>
+            <point key="canvasLocation" x="3136.8000000000002" y="2016.5024630541873"/>
         </scene>
     </scenes>
     <resources>
