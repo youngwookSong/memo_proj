@@ -23,7 +23,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pc-ef-8x6">
-                                <rect key="frame" x="152" y="530" width="110" height="20.5"/>
+                                <rect key="frame" x="152" y="528" width="110" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                         <constraints>
                             <constraint firstItem="cYU-ci-eqM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="62V-I0-lu6"/>
                             <constraint firstItem="9pc-ef-8x6" firstAttribute="centerX" secondItem="cYU-ci-eqM" secondAttribute="centerX" id="G8v-ud-DJ2"/>
-                            <constraint firstItem="9pc-ef-8x6" firstAttribute="top" secondItem="cYU-ci-eqM" secondAttribute="bottom" constant="32" id="YUo-xo-ltm"/>
+                            <constraint firstItem="9pc-ef-8x6" firstAttribute="top" secondItem="cYU-ci-eqM" secondAttribute="bottom" constant="30" id="YUo-xo-ltm"/>
                             <constraint firstItem="cYU-ci-eqM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZpF-am-KGb"/>
                         </constraints>
                     </view>
